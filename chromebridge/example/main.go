@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/slovx2/litch/chromebridge"
+	"github.com/slovx2/litch-automation/chromebridge"
 )
 
 func main() {

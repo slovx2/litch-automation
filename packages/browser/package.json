@@ -1,7 +1,6 @@
 {
-  "name": "browser-internal",
-  "version": "0.37.0",
-  "private": true,
+  "name": "@litch/browser",
+  "version": "0.1.0",
   "type": "module",
   "license": "MIT",
   "description": "可嵌入浏览器运行时：语义驱动、CDP、Electron 与导入",
@@ -84,5 +83,13 @@
   },
   "devDependencies": {
     "electron": "44.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slovx2/litch-automation.git",
+    "directory": "packages/browser"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,7 +1,6 @@
 {
-  "name": "chrome-extension-internal",
-  "version": "0.37.0",
-  "private": true,
+  "name": "@litch/chrome-extension",
+  "version": "0.1.0",
   "type": "module",
   "license": "MIT",
   "description": "可嵌入的 Chrome 扩展运行时",
@@ -34,5 +33,13 @@
   },
   "dependencies": {
     "esbuild": "0.28.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slovx2/litch-automation.git",
+    "directory": "packages/chrome-extension"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,7 +1,6 @@
 {
-  "name": "computer-use-internal",
-  "version": "0.37.0",
-  "private": true,
+  "name": "@litch/computer-use",
+  "version": "0.1.0",
   "type": "module",
   "license": "MIT",
   "description": "可嵌入的 Computer Use 执行器及原生组件传输",
@@ -36,5 +35,13 @@
   },
   "engines": {
     "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slovx2/litch-automation.git",
+    "directory": "packages/computer-use"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

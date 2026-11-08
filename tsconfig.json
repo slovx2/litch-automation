@@ -26,6 +26,6 @@
     ]
   },
   "include": [
-    "packages/shared/src/**/*.mts"
+    "packages/automation-contracts/src/**/*.mts"
   ]
 }

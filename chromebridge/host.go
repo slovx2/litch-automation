@@ -17,7 +17,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/slovx2/litch/internal/hostplatform"
+	"github.com/slovx2/litch-automation/internal/hostplatform"
 )
 
 // 桌面端在 macOS、Linux 上监听 Unix 套接字，Windows 上是命名管道。

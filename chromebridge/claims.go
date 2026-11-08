@@ -10,7 +10,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/slovx2/litch/internal/hostplatform"
+	"github.com/slovx2/litch-automation/internal/hostplatform"
 )
 
 // 每个原生连接持有自己的句柄；操作系统在进程退出时释放锁。锁文件不 unlink，避免换 inode 绕锁。

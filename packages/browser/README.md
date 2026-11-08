@@ -1,6 +1,6 @@
 # 可嵌入浏览器
 
-计划独立发布的包名为 `@litch/browser`，首版将使用独立的 `0.x` semver，不再跟随 Litch。它提供可嵌入的浏览器、AI 工具执行器、来源许可、密码登录与导入组件。默认入口不加载 Electron；Electron 主进程集成使用显式子入口。本包不提供成品浏览器应用，也不会注册扩展或 native host。
+包名为 `@litch/browser`，首版使用独立的 `0.x` semver，不再跟随 Litch。它提供可嵌入的浏览器、AI 工具执行器、来源许可、密码登录与导入组件。默认入口不加载 Electron；Electron 主进程集成使用显式子入口。本包不提供成品浏览器应用，也不会注册扩展或 native host。
 
 Chrome 桥复用的低层模块：
 
@@ -34,11 +34,11 @@ Chrome 桥复用的低层模块：
 
 ## Electron 宿主接入
 
-以下 `browser-internal` 指本地 tarball 的内部包名。示例在宿主主进程执行，变量 `stateDir`、`preloadPath`、`failurePage` 由应用提供：
+以下 `@litch/browser` 指本地 tarball 的内部包名。示例在宿主主进程执行，变量 `stateDir`、`preloadPath`、`failurePage` 由应用提供：
 
 ```ts
-import { createSiteBook, createBrowserExecutor } from 'browser-internal'
-import { createElectronHost, restoreBrowserCookies } from 'browser-internal/electron'
+import { createSiteBook, createBrowserExecutor } from '@litch/browser'
+import { createElectronHost, restoreBrowserCookies } from '@litch/browser/electron'
 import { join } from 'node:path'
 
 const partition = 'persist:your-product-browser'

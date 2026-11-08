@@ -1,6 +1,6 @@
 # Computer Use 嵌入库
 
-计划独立发布的包名为 `@litch/computer-use`，首版将使用独立的 `0.x` semver，不再跟随 Litch。Node 24+，无 Electron 运行时依赖。独立仓只提供 TS 执行器、macOS Swift/Windows Rust 原生助手源码和构建脚本；原生助手由使用方构建、签名、公证（如适用）、打包并嵌入自己的应用，不发布预编译资产。
+包名为 `@litch/computer-use`，首版使用独立的 `0.x` semver，不再跟随 Litch。Node 24+，无 Electron 运行时依赖。独立仓只提供 TS 执行器、macOS Swift/Windows Rust 原生助手源码和构建脚本；原生助手由使用方构建、签名、公证（如适用）、打包并嵌入自己的应用，不发布预编译资产。
 
 - 默认入口：`createComputerUse` / `createComputerExecutor`，使用 automation-contracts 的 `ToolInvocation`、`InvocationContext`、`ToolResult`。宿主提供 `HelperAccess` 与 `disposeHelper`，不会自动查找任何产品路径。
 - `/tools`：`computerTools`，来自 automation-contracts 唯一源，支持 macOS、Windows、portable 与批量能力开关；产品名、助手名和命名空间显式提供。
@@ -18,7 +18,7 @@
 ## 最小宿主接线
 
 ```ts
-import { createNodeComputerUse, MacLauncher } from 'computer-use-internal/node'
+import { createNodeComputerUse, MacLauncher } from '@litch/computer-use/node'
 
 const runtime = createNodeComputerUse({
   hostId: 'my-desktop-instance', namespace: 'my_computer',
@@ -55,6 +55,6 @@ Windows：在 `apps/computer-use-win` 用锁定工具链构建 `x86_64-pc-window
 
 - `npm run typecheck --prefix packages/computer-use`；`npm test --prefix packages/computer-use` 包含独立消费者和公共合同/审批/lifecycle/帧测试。
 - 使用方的桌面端验收应运行实际共享实现；Swift/Rust 与 TypeScript 宿主同读黄金帧。
-- `apps/computer-use/test-native-host.mjs` 只启动自己构建的第二宿主 helper，不请求系统授权、不输入用户应用；在隔离 HOME 下运行。
+- 使用方提供的原生集成夹具 只启动自己构建的第二宿主 helper，不请求系统授权、不输入用户应用；在隔离 HOME 下运行。
 - 取消经 `cancelAction`（按 `actionId`）转给原生助手；已经发出的输入不会撤回。
 - 正式签名/TCC、Windows 真机、WakeQora 安装包接线不由这些假宿主/隐藏窗口测试证明。

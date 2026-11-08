@@ -1,6 +1,6 @@
 # Chrome Native Messaging 转发库
 
-宿主可导入 `github.com/slovx2/litch/chromebridge`，在自己的 Go 命令入口调用：
+宿主可导入 `github.com/slovx2/litch-automation/chromebridge`，在自己的 Go 命令入口调用：
 
 ```go
 if err := chromebridge.Run(ctx, os.Args[1:], os.Stdin, os.Stdout); err != nil {

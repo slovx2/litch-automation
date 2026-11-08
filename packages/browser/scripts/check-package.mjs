@@ -64,7 +64,6 @@ const pack = JSON.parse(
   ),
 )[0]
 const files = new Set(pack.files.map((one) => one.path))
-assert.equal(manifest.private, true)
 assert.equal(manifest.dependencies, undefined)
 for (const file of files) {
   assert.match(file, /^(dist\/|native\/|README\.md$|LICENSE$|package\.json$)/)
